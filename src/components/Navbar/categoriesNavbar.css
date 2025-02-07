@@ -1,0 +1,79 @@
+.sub-navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+    background-color: rgb(246, 246, 246);
+}
+.nav-categories {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.nav-li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+}
+.nav-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+.category-window {
+    display: flex;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    height: fit-content;
+    width: 100%;
+    padding: 0em 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+}
+.category-window ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+.subcategory-link {
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+    font-weight: 500;
+    font-size: 15px;
+}
+.subcategory-link:hover {
+    color: black;
+}
+
+
+@media (max-width: 830px) {
+    .sub-navbar {
+        display: none;
+    }    
+
+}

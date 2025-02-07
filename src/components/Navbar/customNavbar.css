@@ -1,0 +1,248 @@
+.navbar {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    padding: 0 5em;
+    font-size: 1.2rem;
+    height: 3em;
+    width: 100%;
+}
+.navbar.visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+.navbar.none {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.navbar-cont {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+}
+.nav-div-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+.nav-div-left button {
+    background-color: white;
+}
+.nav-div-left .hero-nav-icon {
+    display: none;
+}
+.nav-div-center {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.searchbar-div {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px rgb(130, 130, 130);
+    align-items: center;
+    padding: 0 1em;
+    gap: 0.6em;
+    border-radius: 1em;
+    height: 2em;
+    width: 100%;
+}
+.searchbar-div form {
+    width: 100%;
+}
+.search-input {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 0.9em;
+}
+.search-results-div {
+    position: absolute;
+    background-color: black;
+    top: 60px;
+    left: 48%;
+    transform: translateX(-50%);
+    width: 40%;
+    background-color: white;
+    z-index: 100;
+    border: solid 1px rgb(226, 226, 226);
+    border-radius: 5px;
+    display: flex;
+    padding: 0.5em 1em;
+    font-size: 18px;
+}
+.no-cursor-pointer {
+    cursor: auto;
+}
+.first-cat-section, .second-cat-section, .third-cat-section {
+    display: flex;
+    border-right: solid 1.5px rgb(215, 215, 215);
+    height: 5em;
+    width: 100%;
+}
+.logo-name {
+    color: black;
+    font-size: 27px;
+    font-weight: 600;
+    text-decoration: none;
+    outline: none;
+}
+
+.logo-name:hover {
+    color: black;
+}
+.nav-div-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+.search-btn {
+    display: none;
+    background-color: white;
+    cursor: pointer;
+}
+.nav-a-links {
+    cursor: pointer;
+}
+.hero-nav-icon {
+    width: 26px;
+    height: 26px;
+    color: black;
+}
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: left 0.3s ease-in-out;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+}
+.sidenav.open {
+    left: 0;
+}
+.sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000
+}
+.sidenav-heading {
+    border-bottom: solid 1px rgb(138, 138, 138);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    height: 2em;
+}
+.sidenav-heading span {
+    flex: 1;
+    text-align: center;
+    height: fit-content;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidenav-content-div {
+    display: flex;
+    flex-direction: column;
+}
+.category-div {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    height: 2.5em;
+    text-transform: uppercase;
+}
+.category-div span {
+    font-size: 15px;
+    font-weight: 500;   
+}
+.category-div div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+.profile-div {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+    height: 2.5em;
+    text-transform: uppercase;
+}
+.profile-div span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media (max-width: 830px) {
+    .navbar {
+        padding: 0 2em;
+    }
+    .nav-div-center {
+        display: none;
+    }
+    .search-btn {
+        display: block;
+    }
+    .nav-div-left .hero-nav-icon {
+        display: block;
+    }
+    .user-icon {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 1em;
+    }
+    .logo-name {
+        font-size: 24px;
+    }
+    .hero-nav-icon {
+        width: 22px;
+        height: 22px;
+    }
+    .nav-div-right {
+        gap: 1em;
+    }
+}
+@media (max-width: 530px) {
+    .navbar {
+        padding: 0 1.5em;
+    }
+}
+@media (max-width: 425px) {
+    .navbar {
+        padding: 0 1em;
+    }
+    .logo-name {
+        font-size: 22px;
+    }
+    .nav-div-left {
+        gap: 0.5em;
+    }
+}
+@media (max-width: 300px) {
+    .nav-div-right {
+        gap: 0.5em;
+    }
+}
